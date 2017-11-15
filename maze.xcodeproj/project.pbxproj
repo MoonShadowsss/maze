@@ -7,24 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		882389B21FBC5B2300E7F9AB /* MyPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 882389AD1FBC5B2300E7F9AB /* MyPoint.cpp */; };
+		882389B31FBC5B2300E7F9AB /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 882389B01FBC5B2300E7F9AB /* Queue.cpp */; };
+		882389B41FBC5B2300E7F9AB /* Stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 882389B11FBC5B2300E7F9AB /* Stack.cpp */; };
+		882389B71FBC5B2800E7F9AB /* Maze.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 882389B61FBC5B2800E7F9AB /* Maze.cpp */; };
 		88656B611FB9589900246911 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88656B601FB9589900246911 /* AppDelegate.m */; };
-		88656B641FB9589900246911 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88656B631FB9589900246911 /* ViewController.m */; };
+		88656B641FB9589900246911 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88656B631FB9589900246911 /* ViewController.mm */; };
 		88656B661FB9589900246911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88656B651FB9589900246911 /* Assets.xcassets */; };
 		88656B691FB9589900246911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88656B671FB9589900246911 /* Main.storyboard */; };
 		88656B6C1FB9589900246911 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88656B6B1FB9589900246911 /* main.m */; };
+		88656B761FB958C300246911 /* MazeView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88656B751FB958C300246911 /* MazeView.mm */; };
+		8877D7621FB9CC0400B11203 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8877D7611FB9CBFA00B11203 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		882389AC1FBC5B2300E7F9AB /* Queue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
+		882389AD1FBC5B2300E7F9AB /* MyPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyPoint.cpp; sourceTree = "<group>"; };
+		882389AE1FBC5B2300E7F9AB /* Stack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
+		882389AF1FBC5B2300E7F9AB /* MyPoint.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MyPoint.hpp; sourceTree = "<group>"; };
+		882389B01FBC5B2300E7F9AB /* Queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Queue.cpp; sourceTree = "<group>"; };
+		882389B11FBC5B2300E7F9AB /* Stack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stack.cpp; sourceTree = "<group>"; };
+		882389B51FBC5B2800E7F9AB /* Maze.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Maze.hpp; sourceTree = "<group>"; };
+		882389B61FBC5B2800E7F9AB /* Maze.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Maze.cpp; sourceTree = "<group>"; };
 		88656B5C1FB9589900246911 /* maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88656B5F1FB9589900246911 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		88656B601FB9589900246911 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		88656B621FB9589900246911 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		88656B631FB9589900246911 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		88656B631FB9589900246911 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		88656B651FB9589900246911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88656B681FB9589900246911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88656B6A1FB9589900246911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88656B6B1FB9589900246911 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88656B6D1FB9589900246911 /* maze.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = maze.entitlements; sourceTree = "<group>"; };
+		88656B741FB958C300246911 /* MazeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MazeView.h; sourceTree = "<group>"; };
+		88656B751FB958C300246911 /* MazeView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MazeView.mm; sourceTree = "<group>"; };
+		8877D7611FB9CBFA00B11203 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8877D7621FB9CC0400B11203 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,7 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				88656B5E1FB9589900246911 /* maze */,
+				88656B731FB958A800246911 /* Support Files */,
 				88656B5D1FB9589900246911 /* Products */,
+				8877D7601FB9CBF900B11203 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,7 +80,7 @@
 				88656B5F1FB9589900246911 /* AppDelegate.h */,
 				88656B601FB9589900246911 /* AppDelegate.m */,
 				88656B621FB9589900246911 /* ViewController.h */,
-				88656B631FB9589900246911 /* ViewController.m */,
+				88656B631FB9589900246911 /* ViewController.mm */,
 				88656B651FB9589900246911 /* Assets.xcassets */,
 				88656B671FB9589900246911 /* Main.storyboard */,
 				88656B6A1FB9589900246911 /* Info.plist */,
@@ -68,6 +88,31 @@
 				88656B6D1FB9589900246911 /* maze.entitlements */,
 			);
 			path = maze;
+			sourceTree = "<group>";
+		};
+		88656B731FB958A800246911 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				882389B61FBC5B2800E7F9AB /* Maze.cpp */,
+				882389B51FBC5B2800E7F9AB /* Maze.hpp */,
+				882389AD1FBC5B2300E7F9AB /* MyPoint.cpp */,
+				882389AF1FBC5B2300E7F9AB /* MyPoint.hpp */,
+				882389B01FBC5B2300E7F9AB /* Queue.cpp */,
+				882389AC1FBC5B2300E7F9AB /* Queue.hpp */,
+				882389B11FBC5B2300E7F9AB /* Stack.cpp */,
+				882389AE1FBC5B2300E7F9AB /* Stack.hpp */,
+				88656B741FB958C300246911 /* MazeView.h */,
+				88656B751FB958C300246911 /* MazeView.mm */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		8877D7601FB9CBF900B11203 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8877D7611FB9CBFA00B11203 /* Cocoa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88656B641FB9589900246911 /* ViewController.m in Sources */,
+				88656B641FB9589900246911 /* ViewController.mm in Sources */,
+				88656B761FB958C300246911 /* MazeView.mm in Sources */,
+				882389B21FBC5B2300E7F9AB /* MyPoint.cpp in Sources */,
+				882389B31FBC5B2300E7F9AB /* Queue.cpp in Sources */,
+				882389B41FBC5B2300E7F9AB /* Stack.cpp in Sources */,
 				88656B6C1FB9589900246911 /* main.m in Sources */,
+				882389B71FBC5B2800E7F9AB /* Maze.cpp in Sources */,
 				88656B611FB9589900246911 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PNMHV2T65L;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				INFOPLIST_FILE = maze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.hadow.maze;
@@ -286,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PNMHV2T65L;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				INFOPLIST_FILE = maze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.hadow.maze;

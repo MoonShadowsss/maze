@@ -7,9 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MazeView.h"
 
 @interface ViewController : NSViewController
-
 
 @end
 
