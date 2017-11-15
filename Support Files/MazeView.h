@@ -11,10 +11,12 @@
 
 @interface MazeView : NSView
 
-- (void)setMaze:(void **)maze height:(int)height width:(int)width startPoint:(MyPoint)startPoint endPoint:(MyPoint)endPoint;
 @property (nonatomic) Maze myMaze;
 @property (nonatomic) MyPoint startPoint;
 @property (nonatomic) MyPoint endPoint;
 @property (nonatomic) Stack<MyPoint> pointStack;
+
+- (void)setMaze:(void **)maze height:(int)height width:(int)width startPoint:(MyPoint)startPoint endPoint:(MyPoint)endPoint;
+- (void)getPath;
 
 @end

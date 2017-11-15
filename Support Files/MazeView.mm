@@ -36,11 +36,13 @@
             }
         }
         CGContextSetRGBFillColor(context, 0, 0, 1, 1);
-        Stack<MyPoint> tem = _pointStack;
-        while (!tem.isEmpty()) {
-            MyPoint point = tem.getTop();
-            CGContextFillRect(context, [self getCGRectOfPoint:point.Column() y:point.Row()]);
-            tem.pop();
+        if (!_pointStack.isEmpty()) {
+            Stack<MyPoint> tem = _pointStack;
+            while (!tem.isEmpty()) {
+                MyPoint point = tem.getTop();
+                CGContextFillRect(context, [self getCGRectOfPoint:point.Column() y:point.Row()]);
+                tem.pop();
+            }
         }
     }
 }
@@ -66,7 +68,17 @@
         }
         [_maze addObject:array];
     }
-    _pointStack = _myMaze.getBFSStack();
+    [self setNeedsDisplay:true];
+}
+
+- (void)getPath {
+    if (_maze && _height && _width) {
+        if (!_pointStack.isEmpty()) {
+            _pointStack = *new Stack<MyPoint>;
+        } else {
+            _pointStack = _myMaze.getBFSStack();
+        }
+    }
     [self setNeedsDisplay:true];
 }
 

@@ -16,25 +16,29 @@
 
 @implementation ViewController
 
+int maze[8][8] = {
+    {0, 0, 0, 0, 1, 0, 0, 0},
+    {0, 1, 0, 0, 0, 0, 0, 0},
+    {0, 1, 1, 0, 1, 1, 0, 1},
+    {0, 1, 0, 0, 0, 1, 0, 0},
+    {0, 0, 0, 1, 0, 0, 1, 0},
+    {0, 1, 1, 1, 1, 0, 0, 0},
+    {0, 0, 0, 0, 1, 0, 0, 0},
+    {0, 1, 1, 0, 1, 0, 0, 0},
+};
+MyPoint startPoint = MyPoint(0, 0);
+MyPoint endPoint = MyPoint(7, 7);
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
-    int maze[7][7] = {
-        {0, 0, 0, 0, 0, 0, 0},
-        {0, 1, 0, 1, 0, 0, 0},
-        {0, 1, 1, 1, 1, 1, 0},
-        {0, 1, 0, 0, 0, 1, 0},
-        {0, 0, 0, 1, 0, 0, 0},
-        {0, 1, 1, 1, 1, 0, 0},
-        {0, 1, 1, 1, 1, 0, 0},
-    };
-    MyPoint startPoint = MyPoint(0, 0);
-    MyPoint endPoint = MyPoint(6, 6);
-    [_mazeView setMaze:(void **)maze height:7 width:7 startPoint:startPoint endPoint:endPoint];
-    _mazeView.myMaze.getPathByBFS();
+    [_mazeView setMaze:(void **)maze height:8 width:8 startPoint:startPoint endPoint:endPoint];
 }
 
+- (IBAction)pathButton:(NSButton *)sender {
+    [_mazeView getPath];
+}
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
