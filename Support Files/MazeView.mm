@@ -11,8 +11,8 @@
 @interface MazeView()
 
 @property (nonatomic) NSMutableArray *maze;
-@property (nonatomic) int height;
-@property (nonatomic) int width;
+@property (assign, nonatomic) int height;
+@property (assign, nonatomic) int width;
 
 @end
 
@@ -77,7 +77,14 @@
             _pointStack = *new Stack<MyPoint>;
         } else {
             _pointStack = _myMaze.getBFSStack();
-         }
+            if (_pointStack.isEmpty()) {
+                NSAlert *alert = [[NSAlert alloc] init];
+                [alert addButtonWithTitle:@"OK"];
+                [alert setMessageText:@"No Way Out!"];
+                [alert setAlertStyle:NSAlertStyleWarning];
+                [alert beginSheetModalForWindow:self.window completionHandler:nil];
+            }
+        }
     }
     [self setNeedsDisplay:true];
 }
@@ -87,10 +94,8 @@
 }
 
 - (void)mouseDown:(NSEvent *)event {
-    NSLog(@"%f, %f", event.locationInWindow.x, event.locationInWindow.y);
     NSInteger x = (int)event.locationInWindow.x / ((int)self.frame.size.width / _myMaze.Length());
     NSInteger y = _myMaze.Height() - ((int)event.locationInWindow.y - 20)/ (((int)self.frame.size.height) / _myMaze.Height()) - 1;
-    NSLog(@"%d, %d", x, y);
     if (x < _myMaze.Length() && y <_myMaze.Height()) {
         if ([[[_maze objectAtIndex:y] objectAtIndex:x] isEqual:[NSNumber numberWithInt:1]]) {
             [[_maze objectAtIndex:y] setObject:[NSNumber numberWithInt:0] atIndex:x];
