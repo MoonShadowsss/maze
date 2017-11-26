@@ -209,3 +209,19 @@ Stack<MyPoint> Maze::getBFSStack() {
     }
     return pointStack;
 }
+
+int Maze::Length() {
+    return length;
+}
+
+int Maze::Height() {
+    return height;
+}
+
+void Maze::reverseAt(int x, int y) {
+    if (maze[y][x] == 1) {
+        maze[y][x] = 0;
+    } else {
+        maze[y][x] = 1;
+    }
+}

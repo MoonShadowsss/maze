@@ -25,8 +25,8 @@ public:
     }
     T deQueue() {
         if (length > 0) {
-            return data[top++];
             length--;
+            return data[top++];
         } else {
             return *new T;
         }

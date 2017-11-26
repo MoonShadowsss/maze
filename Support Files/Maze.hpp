@@ -32,6 +32,9 @@ public:
     void getPathByDFS();
     void getPathByBFS();
     Stack<MyPoint> getBFSStack();
+    int Length();
+    int Height();
+    void reverseAt(int x, int y);
 };
 
 #endif /* Maze_hpp */

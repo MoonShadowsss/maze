@@ -16,24 +16,25 @@
 
 @implementation ViewController
 
-int maze[8][8] = {
-    {0, 0, 0, 0, 1, 0, 0, 0},
-    {0, 1, 0, 0, 0, 0, 0, 0},
-    {0, 1, 1, 0, 1, 1, 0, 1},
-    {0, 1, 0, 0, 0, 1, 0, 0},
-    {0, 0, 0, 1, 0, 0, 1, 0},
-    {0, 1, 1, 1, 1, 0, 0, 0},
-    {0, 0, 0, 0, 1, 0, 0, 0},
-    {0, 1, 1, 0, 1, 0, 0, 0},
+int maze[9][9] = {
+    {0, 0, 0, 0, 1, 0, 0, 0, 1},
+    {0, 1, 0, 0, 0, 0, 0, 0, 1},
+    {0, 1, 1, 0, 1, 1, 0, 1, 1},
+    {0, 1, 0, 0, 0, 1, 0, 0, 1},
+    {0, 0, 0, 1, 0, 0, 1, 0, 0},
+    {0, 1, 1, 1, 1, 0, 0, 0, 1},
+    {1, 0, 0, 0, 1, 1, 1, 0, 1},
+    {0, 1, 1, 0, 0, 0, 0, 0, 0},
+    {0, 1, 1, 0, 1, 0, 0, 0, 0},
 };
 MyPoint startPoint = MyPoint(0, 0);
-MyPoint endPoint = MyPoint(7, 7);
+MyPoint endPoint = MyPoint(8, 8);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
-    [_mazeView setMaze:(void **)maze height:8 width:8 startPoint:startPoint endPoint:endPoint];
+    [_mazeView setMaze:(void **)maze height:9 width:9 startPoint:startPoint endPoint:endPoint];
 }
 
 - (IBAction)pathButton:(NSButton *)sender {

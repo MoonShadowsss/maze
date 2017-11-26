@@ -709,9 +709,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="AEs-W9-wfa" customClass="MazeView">
-                                <rect key="frame" x="0.0" y="20" width="480" height="250"/>
-                            </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r8G-Z3-RfY">
                                 <rect key="frame" x="204" y="-7" width="73" height="32"/>
                                 <buttonCell key="cell" type="push" title="Path" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="azh-gU-rsY">
@@ -722,6 +719,9 @@
                                     <action selector="pathButton:" target="XfG-lQ-9wD" id="mSw-Hn-mii"/>
                                 </connections>
                             </button>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="AEs-W9-wfa" customClass="MazeView">
+                                <rect key="frame" x="0.0" y="20" width="480" height="250"/>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="AEs-W9-wfa" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="BWO-C5-kFM"/>

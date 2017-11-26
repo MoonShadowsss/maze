@@ -35,7 +35,7 @@
                 CGContextStrokeRect(context, [self getCGRectOfPoint:j y:i]);
             }
         }
-        CGContextSetRGBFillColor(context, 0, 0, 1, 1);
+        CGContextSetRGBFillColor(context, 0, 0, 1, 0.7);
         if (!_pointStack.isEmpty()) {
             Stack<MyPoint> tem = _pointStack;
             while (!tem.isEmpty()) {
@@ -77,13 +77,29 @@
             _pointStack = *new Stack<MyPoint>;
         } else {
             _pointStack = _myMaze.getBFSStack();
-        }
+         }
     }
     [self setNeedsDisplay:true];
 }
 
 - (BOOL)isFlipped {
     return true;
+}
+
+- (void)mouseDown:(NSEvent *)event {
+    NSLog(@"%f, %f", event.locationInWindow.x, event.locationInWindow.y);
+    NSInteger x = (int)event.locationInWindow.x / ((int)self.frame.size.width / _myMaze.Length());
+    NSInteger y = _myMaze.Height() - ((int)event.locationInWindow.y - 20)/ (((int)self.frame.size.height) / _myMaze.Height()) - 1;
+    NSLog(@"%d, %d", x, y);
+    if (x < _myMaze.Length() && y <_myMaze.Height()) {
+        if ([[[_maze objectAtIndex:y] objectAtIndex:x] isEqual:[NSNumber numberWithInt:1]]) {
+            [[_maze objectAtIndex:y] setObject:[NSNumber numberWithInt:0] atIndex:x];
+        } else {
+            [[_maze objectAtIndex:y] setObject:[NSNumber numberWithInt:1] atIndex:x];
+        }
+        _myMaze.reverseAt(x, y);
+    }
+    [self setNeedsDisplay:YES];
 }
 
 @end
