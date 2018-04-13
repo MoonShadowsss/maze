@@ -20,7 +20,6 @@ class Maze {
 private:
     int **maze;
     bool **flag;
-//    int **mark;
     int height;
     int length;
     MyPoint startPoint;
