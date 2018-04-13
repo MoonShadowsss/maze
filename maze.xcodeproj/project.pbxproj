@@ -60,7 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				88656B5E1FB9589900246911 /* maze */,
-				88656B731FB958A800246911 /* Support Files */,
+				88656B731FB958A800246911 /* Main Files */,
 				88656B5D1FB9589900246911 /* Products */,
 				8877D7601FB9CBF900B11203 /* Frameworks */,
 			);
@@ -90,7 +90,7 @@
 			path = maze;
 			sourceTree = "<group>";
 		};
-		88656B731FB958A800246911 /* Support Files */ = {
+		88656B731FB958A800246911 /* Main Files */ = {
 			isa = PBXGroup;
 			children = (
 				882389B61FBC5B2800E7F9AB /* Maze.cpp */,
@@ -104,7 +104,7 @@
 				88656B741FB958C300246911 /* MazeView.h */,
 				88656B751FB958C300246911 /* MazeView.mm */,
 			);
-			path = "Support Files";
+			path = "Main Files";
 			sourceTree = "<group>";
 		};
 		8877D7601FB9CBF900B11203 /* Frameworks */ = {
